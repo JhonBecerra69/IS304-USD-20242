@@ -7,4 +7,33 @@ Crear un menú para crear objetos y realizar las diversas operaciones referidas.
 
 '''
 class CuentaBancaria:
-  
+
+  def mostrar_menu():
+    print("\ln--- !Bienvenido al Banco! ---\ln")
+    print("\n--- Menú de Cuentas Bancarias ---")
+    print("1. Abrir una nueva cuenta")
+    print("2. Realizar una consignación")
+    print("3. Realizar un retiro")
+    print("4. Mostrar información de la cuenta")
+    print("5. Salir")
+
+  def main():
+    while True:
+        mostrar_menu()
+        opciones = int(input(¿Que deseas hacer?))
+        if opciones == 1:
+            Abrirnuevacuenta()
+        if opciones == 2:
+            Realizarconsignacion()
+        if opciones == 3:
+            Realizarunretiro()
+        if opciones == 4:
+            Mostrarinformacion()
+        if opciones == 5:
+            Salir()
+            
+            
+            
+
+if __name__ == "__main__":
+    main()
