@@ -6,9 +6,27 @@ Agregar metodos para aperturar cuentas, realizar consignaciones y retiros contro
 Crear un menú para crear objetos y realizar las diversas operaciones referidas.
 
 '''
-class CuentaBancaria:
+import datatime
 
-  def mostrar_menu():
+class CuentaBancaria:
+    def __init__(self, numeroCta=None, nombreCliente=None, fechaApertura=None, saldo=0.0):
+        if numeroCta and nombreCliente and fechaApertura:
+            self.__numeroCta = numeroCta
+            self.__nombreCliente = nombreCliente
+            self.__fechaApertura = fechaApertura
+            self.__saldo = saldo
+        else:
+            self.__numeroCta = ""
+            self.__nombreCliente = ""
+            self.__fechaApertura = ""
+            self.__saldo = 0.0
+   
+
+def Abrirnuevacuenta():
+    nu
+
+
+def mostrar_menu():
     print("\ln--- !Bienvenido al Banco! ---\ln")
     print("\n--- Menú de Cuentas Bancarias ---")
     print("1. Abrir una nueva cuenta")
@@ -17,10 +35,13 @@ class CuentaBancaria:
     print("4. Mostrar información de la cuenta")
     print("5. Salir")
 
-  def main():
+def main():
+    cuentas ={}
+    
     while True:
         mostrar_menu()
-        opciones = int(input(¿Que deseas hacer?))
+        opciones = int(input("¿Que deseas hacer?"))
+        
         if opciones == 1:
             Abrirnuevacuenta()
         if opciones == 2:
